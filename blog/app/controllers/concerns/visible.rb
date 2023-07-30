@@ -1,4 +1,4 @@
-module 
+module Visible
   extend ActiveSupport::Concern
 
   VALID_STATUSES = ['public', 'private', 'archived']
@@ -12,8 +12,9 @@ module
       where(status: 'public').count
     end
   end
-  
+
   def archived?
     status == 'archived'
   end
 end
+
