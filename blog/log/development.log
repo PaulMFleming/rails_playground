@@ -1532,3 +1532,60 @@ Processing by ArticlesController#show as TURBO_STREAM
 Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 5115)
 
 
+Started GET "/" for 127.0.0.1 at 2023-07-30 15:07:12 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 5386)
+  Rendered layout layouts/application.html.erb (Duration: 74.1ms | Allocations: 40802)
+Completed 200 OK in 86ms (Views: 76.0ms | ActiveRecord: 0.5ms | Allocations: 47006)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2023-07-30 15:07:15 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/show.html.erb:14
+  Rendered collection of comments/_comment.html.erb [2 times] (Duration: 0.7ms | Allocations: 335)
+  Rendered articles/show.html.erb within layouts/application (Duration: 23.5ms | Allocations: 11992)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 14307)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.7ms | Allocations: 17110)
+
+
+Started POST "/articles/3/comments" for 127.0.0.1 at 2023-07-30 15:07:35 +0100
+Processing by CommentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"commenter"=>"Forza", "body"=>"Isn't that a game?"}, "commit"=>"Create Comment", "article_id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "Forza"], ["body", "Isn't that a game?"], ["article_id", 3], ["created_at", "2023-07-30 14:07:35.866776"], ["updated_at", "2023-07-30 14:07:35.866776"]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://127.0.0.1:3000/articles/3
+Completed 302 Found in 19ms (ActiveRecord: 12.3ms | Allocations: 4703)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2023-07-30 15:07:35 +0100
+Processing by ArticlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/show.html.erb:14
+  Rendered collection of comments/_comment.html.erb [3 times] (Duration: 0.2ms | Allocations: 102)
+  Rendered articles/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2177)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4469)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 5289)
+
+
