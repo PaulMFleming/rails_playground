@@ -1,24 +1,52 @@
-# README
+# Basic Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Built following [Ruby On Rails - getting started](https://guides.rubyonrails.org/getting_started.html) guide
 
-Things you may want to cover:
+## Things learned from this project
+- Creating a new Rails project
+```
+rails new project_name
+```
+- Starting the rails local web server
+```
+bin/rails server
+```
+- Setting up index page & other routes
+```
+Rails.application.routes.draw do
+  root "articles#index"
 
-* Ruby version
+  get "/articles", to: "articles#index"
+end
+```
+- Generating models
+```
+bin/rails generate model Article title:string body:text
+```
+- Database migrations
+```
+bin/rails db:migrate
+```
+- Using a model to interact with a database
+```
+bin/rails console
+irb> article = Article.new(title: "Hello Rails", body: "I am on Rails!")
+irb> article.save
+irb> article
+=> #<Article id: 1, title: "Hello Rails", body: "I am on Rails!", created_at: "2020-01-18 23:47:30", updated_at: "2020-01-18 23:47:30">
+Article.find(1)
+Article.all
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+- CRUD ops for blog articles
+    * define methods in relevant controllers
+- Adding additional models & Associating models
+- Upddating routes
+- Generating controllers
+```
+ bin/rails generate controller Comments
+```
+- Rendering partial collections & forms
+- Using concerns
+- Deleting associated objects
+- Basic http auth
