@@ -41,12 +41,34 @@ Article.all
 - CRUD ops for blog articles
     * define methods in relevant controllers
 - Adding additional models & Associating models
-- Upddating routes
+- Updating routes (using `resouces`)
+```
+Rails.application.routes.draw do
+  root "articles#index"
+
+  resources :articles
+end
+
+```
 - Generating controllers
 ```
  bin/rails generate controller Comments
 ```
 - Rendering partial collections & forms
+    * D.R.Y.
 - Using concerns
-- Deleting associated objects
+    * D.R.Y. (concerns are like mixins)
+- Deleting associated objects (with `dependent`)
+```
+class Article < ApplicationRecord
+  include Visible
+
+  has_many :comments, dependent: :destroy
+
+  validates :title, presence: true
+  validates :body, presence: true, length: { minimum: 10 }
+end
+```
+
 - Basic http auth
+    * using the `http_basic_authenticate_with` Rails method 
