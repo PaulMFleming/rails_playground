@@ -97,3 +97,55 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 90ms (Views: 80.6ms | ActiveRecord: 0.6ms | Allocations: 45980)
 
 
+Started GET "/" for 127.0.0.1 at 2023-07-30 13:43:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/paul/repos/playground/rails/blog/app/controllers/articles_controller.rb:22: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/articles_controller.rb:22: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/articles_controller.rb:22: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/articles_controller.rb:22: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for 127.0.0.1 at 2023-07-30 13:43:59 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 5724)
+  Rendered layout layouts/application.html.erb (Duration: 81.7ms | Allocations: 41160)
+Completed 200 OK in 92ms (Views: 83.7ms | ActiveRecord: 0.5ms | Allocations: 46046)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-30 13:44:05 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 703)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3214)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 3561)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2023-07-30 13:44:08 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2714)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 5488)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2023-07-30 13:44:12 +0100
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2820)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 5145)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 5544)
+
+
