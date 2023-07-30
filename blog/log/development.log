@@ -757,3 +757,382 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 3724)
 
 
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:27:50 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 5471)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5581)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms | Allocations: 17411)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000aca8>
+
+                    tubo_method: delete,
+                                 ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     tubo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 7.5ms | Allocations: 5473)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5583)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms | Allocations: 17412)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000aca8>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:07 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4609)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 4689)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms | Allocations: 5509)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000aff0>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:07 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4545)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4625)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 5342)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000b2e8>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:08 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4545)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4625)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 5342)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000b5e0>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:08 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 4542)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4621)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms | Allocations: 5323)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000b8b0>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:10 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4544)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4623)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms | Allocations: 5325)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000bba8>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:12 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4544)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4624)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 5326)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000be78>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:12 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4544)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4623)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms | Allocations: 5325)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000c148>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:13 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4544)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4623)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 5325)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000c440>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:13 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4544)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4829)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms | Allocations: 8058)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000c508>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:14 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4544)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4623)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 5325)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000ca58>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:14 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 4544)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4827)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms | Allocations: 7870)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x0000000000caf8>
+
+                    turbo_method: delete,
+                                  ^^^^^^):
+     5: <ul>
+     6:   <li><%= link_to "Edit", edit_article_path(@article)%></li>
+     7:   <li><%= link_to "Destroy", article_path(@article), data: {
+     8:                     turbo_method: delete,
+     9:                     turbo_confirm: "Are you sure?"
+    10:                     } %></li>
+    11: </ul>
+  
+app/views/articles/show.html.erb:8
+Started GET "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 691)
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 36225)
+Completed 200 OK in 83ms (Views: 64.2ms | ActiveRecord: 0.7ms | Allocations: 48116)
+
+
+Started DELETE "/articles/4" for 127.0.0.1 at 2023-07-30 14:28:37 +0100
+Processing by ArticlesController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:40:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 18ms (ActiveRecord: 12.9ms | Allocations: 2791)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-30 14:28:37 +0100
+Processing by ArticlesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1064)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3530)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 3974)
+
+
